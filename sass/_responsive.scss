@@ -1,0 +1,66 @@
+@include media-md {
+  .menu-btn {
+    visibility: hidden;
+  }
+
+  .nav {
+    visibility: visible;
+    height: 5rem;
+
+    .menu-nav {
+      display: block;
+      transform: translateY(0);
+      height: 100%;
+      background: transparent;
+      text-align: left;
+
+      &-item {
+        display: inline;
+        padding-right: 1.5rem;
+      }
+
+      &-link {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+
+    .main {
+      width: 40%;
+    }
+
+    .about {
+      width: 29%;
+    }
+
+    .photos {
+      width: 31%;
+
+      .profile-img {
+        background: linear-gradient(
+            to right,
+            rgba($primary-color, 0.5),
+            rgba($primary-color, 0.5)
+          ),
+          url("../img/photography.jpg") center center;
+        background-size: cover;
+        height: 70vh;
+        padding: 2rem 4rem;
+
+        img {
+          width: 22vw;
+          height: 62vh;
+        }
+      }
+    }
+  }
+}
+
+@include media-lg {
+}
+
+@include media-xl {
+}

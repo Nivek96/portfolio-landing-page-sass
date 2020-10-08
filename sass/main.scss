@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+@import "config";
+@import "menu";
+@import "responsive";
+
+body {
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+
+a {
+  color: set-text-color($primary-color);
+  text-decoration: none;
+}
+
+.btn {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  color: $secondary-color;
+  padding: 2rem 0 0 0;
+  @include transition-ease;
+
+  &:hover {
+    color: $primary-color;
+
+    &::after {
+      width: 50px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 28px;
+    height: 2px;
+    background: $primary-color;
+    @include transition-ease;
+  }
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+.main {
+  height: 100vh;
+  background: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .presentation {
+    margin: auto 0;
+    padding: 1rem;
+
+    h1 {
+      // position: absolute;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    p {
+      line-height: 1.5rem;
+    }
+  }
+
+  .social-icons {
+    margin: 1rem;
+
+    i {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.about {
+  width: 100vw;
+  height: 100vh;
+
+  .profile-img {
+    background: url("../img/jakob-owens.jpg") center top;
+    background-size: cover;
+    height: 70vh;
+  }
+
+  .about-desc {
+    height: 100vh;
+    background: set-text-color($primary-color);
+    height: 30vh;
+    padding: 0 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $primary-color;
+
+    h2 {
+      // color: set-text-color($primary-color);
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: $secondary-color;
+    }
+
+    p {
+      line-height: 1.5rem;
+    }
+  }
+}
+
+.photos {
+  width: 100vw;
+
+  .profile-img {
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.5),
+        rgba($primary-color, 0.5)
+      ),
+      url("../img/photography.jpg") center center;
+    background-size: cover;
+    height: 70vh;
+    padding: 1rem 2rem;
+
+    img {
+      width: 82vw;
+      height: 65vh;
+    }
+  }
+
+  .about-desc {
+    background: set-text-color($primary-color);
+    height: 30vh;
+    padding: 0 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $primary-color;
+
+    h2 {
+      // color: set-text-color($primary-color);
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: $secondary-color;
+    }
+
+    p {
+      line-height: 1.5rem;
+    }
+  }
+}
